@@ -55,8 +55,26 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 
 ```
 Your answer...
-```
+For managing customer addresses, I suggest two distinct architectures based on whether we want to overwrite old addresses (type 1) or retain historical changes (type 2):
 
+for type 1: Customer Address (Current Address Only)
+customer_id (PK, FK) - (PK & FK)
+address_line
+city
+state
+zip_code
+country
+
+for type 2: historical history (all addresses included)
+address_id (PK) 
+customer_id (FK) 
+address_line
+city
+state
+zip_code
+country
+
+for address iD, we will assign each address a new address_ID
 ***
 
 ## Section 2:
